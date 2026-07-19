@@ -1,0 +1,151 @@
+:root {
+  color-scheme: light dark;
+  font-family: system-ui, -apple-system, sans-serif;
+  --orange: #f97316;
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --success: #22c55e;
+  --danger: #ef4444;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: var(--card);
+}
+
+.auth-page, .skill-path, .lesson-page, .stats-page {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 4rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+input, button {
+  font-size: 1rem;
+  padding: 0.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid #334155;
+  background: var(--card);
+  color: var(--text);
+}
+
+button {
+  background: var(--orange);
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error {
+  color: var(--danger);
+}
+
+.skill-path__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.lesson-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: var(--card);
+}
+
+.lesson-card--locked {
+  opacity: 0.5;
+}
+
+.lesson-card--completed {
+  border: 1px solid var(--success);
+}
+
+.lesson-card--unlocked {
+  border: 1px solid var(--orange);
+}
+
+.lesson-card__icon {
+  font-size: 1.5rem;
+}
+
+.lesson-page section {
+  margin-top: 2rem;
+}
+
+.quiz-question {
+  border: none;
+  margin-bottom: 1.25rem;
+}
+
+.quiz-choice {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-direction: row;
+  font-weight: normal;
+  color: var(--text);
+  padding: 0.3rem 0;
+}
+
+.drill-input-label input {
+  width: 100%;
+  margin-top: 0.25rem;
+}
+
+.lesson-result {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: var(--card);
+}
+
+.lesson-result--success {
+  border: 1px solid var(--success);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.4rem;
+  border-bottom: 1px solid #334155;
+}
