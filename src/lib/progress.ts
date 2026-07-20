@@ -50,7 +50,7 @@ export async function submitLessonAttempt(
  * target met AND quiz pass threshold met). The first lesson in the path
  * (no prerequisite) is always unlocked.
  */
-export function computeLessonStatus(lesson: Lesson, lessons: Lesson[], progress: Progress[]): LessonStatus {
+export function computeLessonStatus(lesson: Lesson, _lessons: Lesson[], progress: Progress[]): LessonStatus {
   const own = progress.find((p) => p.lesson_id === lesson.id);
   if (own?.completed) return "completed";
 
